@@ -13,7 +13,7 @@ export default function Home({ currentImage }) {
 }
 
 export async function getServerSideProps() {
-  const dataUris = (await import("./data_uris")).default;
+  const dataUris = (await import("../data_uris")).default;
   const randomIndex = Math.floor(Math.random() * dataUris.length);
   const currentImage = dataUris[randomIndex];
 
